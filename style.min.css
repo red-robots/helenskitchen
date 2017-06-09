@@ -1233,7 +1233,7 @@ optgroup{font-weight:bold}
 table{border-collapse:collapse;border-spacing:0}
 td,th{padding:0}
 button:focus{outline:0}
-body,button,input,select,textarea{color:#404040;font-family:sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
+body,button,input,select,textarea{color:black;font-family:sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
 h1,h2,h3,h4,h5,h6{clear:both}
 .entry-content h1{font-size:30px}
 p{margin-bottom:1.5em}
@@ -1248,7 +1248,7 @@ big{font-size:125%}
 .custom-color{color:#444}
 html{box-sizing:border-box}
 *,*:before,*:after{box-sizing:inherit}
-body{background:#ecf8f8}
+body{background:white}
 blockquote,q{quotes:"" ""}
 blockquote:before,blockquote:after,q:before,q:after{content:""}
 hr{background-color:#ccc;border:0;height:1px;margin-bottom:1.5em}
@@ -1381,29 +1381,24 @@ html[xmlns] .flexslider .slides{display:block}
 .flex-direction-nav .flex-next{opacity:1;right:10px}
 }.widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
-div{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-break:break-all;word-break:break-word;-ms-hyphens:auto;-moz-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}
-.clear{clear:both}
-.wrapper{width:100%;margin:0 auto;padding:20px}
-@media screen and (min-width:600px){.wrapper{width:100%}
-}@media screen and (min-width:1200px){.wrapper{width:1200px;padding:0}
-}.content-area{width:100%;margin:0 auto}
-@media screen and (min-width:600px){.content-area{width:66%;float:left;margin:0}
-}@media screen and (min-width:1200px){}
-.widget-area{width:100%;margin:0 auto}
-@media screen and (min-width:600px){.widget-area{width:26%;float:right;margin:0}
-}@media screen and (min-width:1200px){}
-.logo,h1.logo{width:300px;height:200px;background-image:url(images/logo.png);margin:10px auto}
-@media screen and (min-width:600px){.logo,h1.logo{width:300px;height:200px;float:left;margin:0}
-}@media screen and (min-width:1200px){}
-.logo a,h1.logo a{width:300px;height:200px;display:block;text-indent:-9000px}
-@media screen and (min-width:600px){.logo a,h1.logo a{width:300px;height:200px}
-}@media screen and (min-width:1200px){}
-.sticky{display:block}
-.hentry{margin:0 0 1.5em}
-.byline,.updated:not(.published){display:none}
-.single .byline,.group-blog .byline{display:inline}
-.page-content,.entry-content,.entry-summary{margin:1.5em 0 0}
-.page-links{clear:both;margin:0 0 1.5em}
+.clear-bottom:after{clear:both;content:"";display:block}
+.copy{font-size:16px;color:black}
+@media screen and (min-width:600px){.copy{font-size:18px}
+}.copy>*:first-child{margin-top:0;padding-top:0}
+.copy>*:last-child{margin-bottom:0;padding-bottom:0}
+.copy p{margin:20px 0}
+.copy strong,.copy b,.copy em{font-weight:800}
+.copy a{text-decoration:none;color:black;position:relative}
+.copy a:hover{color:black}
+.copy h1,.copy h2,.copy h3{margin:0 0 10px 0;text-transform:uppercase;color:black}
+.copy h1{font-size:30px}
+.copy h2{font-size:25px}
+.copy h3{font-size:20px}
+.copy ul,.copy ol{padding:0;margin:0 0 20px 20px;font-size:inherit}
+.copy ul li,.copy ol li{margin:0 0 0 20px;font-size:inherit;padding:0;list-style-type:square}
+.copy ul li a,.copy ol li a{cursor:pointer}
+.copy ul li a:hover,.copy ol li a:hover{color:black}
+.copy ul li ul.sub-menu,.copy ol li ul.sub-menu{margin:0}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
