@@ -25,4 +25,4 @@ get_header("simple"); ?>
 	</div><!-- #primary -->
 
 <?php
-get_footer();
+get_footer("simple");
