@@ -14,6 +14,9 @@
     $post = get_post();
     setup_postdata( $post );
     $more_text = get_field("contact_us_text");
+    if(!$more_text):
+        $more_text = "Contact Us to Order";
+    endif;
     $more_link = get_the_permalink( );
     wp_reset_postdata();?>
     <div class="row-1">
@@ -31,7 +34,7 @@
                     <?php the_content();?>
                 </div><!--.copy-->
             <?php endif;
-            if($more_link && $more_text):?>
+            if($more_link):?>
                 <div class="more">
                     <a href="<?php echo $more_link;?>">
                         <?php echo $more_text;?>
