@@ -37,8 +37,14 @@ function js_custom_init()
 	
   ); 
   register_post_type('product',$args); // name used in query
+
+  // Add more between here
   
-  /*##############################################
+  // and here
+  
+  } // close custom post type
+
+/*##############################################
 Custom Taxonomies     */
 add_action( 'init', 'build_taxonomies', 0 );
 
@@ -56,9 +62,3 @@ function build_taxonomies() {
 		) );
 
 } // End build taxonomies
-
-  // Add more between here
-  
-  // and here
-  
-  } // close custom post type
