@@ -1376,7 +1376,7 @@ html[xmlns] .flexslider .slides{display:block}
 .copy strong,.copy b,.copy em{font-weight:800}
 .copy a{text-decoration:none;color:black;position:relative}
 .copy a:hover{color:black}
-.copy h1,.copy h2,.copy h3{margin:0 0 10px 0;text-transform:uppercase;color:black}
+.copy h1,.copy h2,.copy h3{margin:0 0 10px 0;text-transform:uppercase;color:#5d422f}
 .copy h1{font-size:30px}
 .copy h2{font-size:25px}
 .copy h3{font-size:20px}
@@ -1501,7 +1501,8 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:600px){.template-product .products .product{float:left;width:50%;padding:4% 6%}
 }@media screen and (min-width:1200px){.template-product .products .product{width:33.33333%}
 }.template-product .products .product img{display:block;width:100%;margin:0 0 20px 0}
-.template-product .products .product header h2{margin:0 0 20px 0;font-family:LuxRoyale;font-size:20px;color:#5d422f;font-weight:500}
+.template-product .products .product header{margin:0 0 20px 0}
+.template-product .products .product header h2{margin:0;font-family:LuxRoyale;font-size:20px;color:#5d422f;font-weight:500}
 @media screen and (min-width:600px){.template-product .products .product header h2{font-size:35px}
 }.template-product .products .product .copy{width:90%;margin:0 auto;text-align:center}
 .template-products img.banner{width:100%;display:block}
@@ -1515,13 +1516,21 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:600px){.template-products .products .product{float:left;width:50%;padding:4% 6%}
 }@media screen and (min-width:1200px){.template-products .products .product{width:33.33333%}
 }.template-products .products .product img{display:block;width:100%;margin:0 0 20px 0}
-.template-products .products .product header h2{margin:0 0 90px 0;font-family:LuxRoyale;font-size:20px;color:#5d422f;font-weight:500}
-@media screen and (min-width:600px){.template-products .products .product header h2{margin:0 0 120px 0;font-size:35px}
+.template-products .products .product header{margin:0 0 90px 0}
+@media screen and (min-width:600px){.template-products .products .product header{margin:0 0 120px 0}
+}.template-products .products .product header h2{margin:0;font-family:LuxRoyale;font-size:20px;color:#5d422f;font-weight:500}
+@media screen and (min-width:600px){.template-products .products .product header h2{font-size:35px}
 }.template-products .products .product .more{position:absolute;bottom:16%;left:0;width:100%}
 .template-products .products .product .more a{display:block;background-color:#91d0f9;text-decoration:none;text-align:center;border-radius:10px;padding:10px;color:white;font-size:20px;max-width:200px;margin:0 auto}
 @media screen and (min-width:600px){.template-products .products .product .more a{font-size:25px}
 }.template-products .products .product .more a:hover{color:white}
-.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+.error-404>header,.template-sitemap>header{margin:20px 20px 0 20px}
+@media screen and (min-width:600px){.error-404>header,.template-sitemap>header{margin:5% 5% 0 5%}
+}.error-404>header h1,.template-sitemap>header h1{margin:0;font-family:LuxRoyale;font-size:20px;color:#5d422f;font-weight:500}
+@media screen and (min-width:600px){.error-404>header h1,.template-sitemap>header h1{font-size:35px}
+}.error-404 .copy,.template-sitemap .copy{padding:20px}
+@media screen and (min-width:600px){.error-404 .copy,.template-sitemap .copy{padding:5%}
+}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
