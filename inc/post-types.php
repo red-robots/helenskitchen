@@ -38,6 +38,25 @@ function js_custom_init()
   ); 
   register_post_type('product',$args); // name used in query
   
+  /*##############################################
+Custom Taxonomies     */
+add_action( 'init', 'build_taxonomies', 0 );
+
+function build_taxonomies() {
+// custom tax
+	register_taxonomy( 'product_type', 'product',
+		array(
+			'hierarchical' => true, // true = acts like categories false = acts like tags
+			'label' => 'Product Type',
+			'query_var' => true,
+			'show_admin_column' => true,
+			'public' => true,
+			'rewrite' => array( 'slug' => 'product-type' ),
+			'_builtin' => true
+		) );
+
+} // End build taxonomies
+
   // Add more between here
   
   // and here
