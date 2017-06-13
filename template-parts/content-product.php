@@ -22,7 +22,7 @@
     <div class="row-1">
         <div class="col-1">
             <?php if($single_page_image):?>
-                <img class="banner" src="<?php echo $banner_image['url'];?>" alt="<?php echo $banner_image['alt'];?>">
+                <img class="banner" src="<?php echo $single_page_image['sizes']['large'];?>" alt="<?php echo $single_page_image['alt'];?>">
             <?php endif;?>
         </div><!--.col-1-->
         <div class="col-2">
@@ -42,32 +42,36 @@
                 </div><!--.more-->
             <?php endif;?>
         </div><!--.col-2-->
-    </div><!--.row-2-->
+    </div><!--.row-1-->
     <?php $products_title = get_field("products_title","option");
     if($products_title):?>
-        <header>
+        <header class="row-2">
             <h2><?php echo $products_title;?></h2>
         </header>
     <?php endif;?>
-    <?php 
-    $args = array(
-        'post_type'=>'product',
-        'posts_per_page'=>-1,
-    );
-    $query = new WP_Query($args);
-    if($query->have_posts()):?>
-        <div class="products">
-            <?php while($query->have_posts()):$query->the_post();?>
-                <div class="product">
-                    <?php $product_page_image = get_field("product_page_image");?>
-                    <?php if($product_page_image):?>
-                        <img src="<?php echo $product_page_image['sizes']['large'];?>" alt="<?php echo $product_page_image['alt'];?>">
-                    <?php endif;?>
-                    <header>
-                        <h2><?php the_title();?></h2>
-                    </header>
-                </div><!--.product--> 
-            <?php endwhile;?>
+    <?php $available_products = get_field("available_products");
+    if($available_products):?>
+        <div class="products clear-bottom">
+            <?php foreach($available_products as $row):
+                $title = $row["title"];
+                $description = $row["description"];
+                $image = $row["image"];
+                if($title):?>
+                    <div class="product js-blocks">
+                        <?php if($image):?>
+                            <img src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>">
+                        <?php endif;?>
+                        <header>
+                            <h2><?php echo $title;?></h2>
+                        </header>
+                        <?php if($description):?>
+                            <div class="copy">
+                                <?php echo $description;?>
+                            </div><!--.copy-->
+                        <?php endif;?>
+                    </div><!--.product--> 
+                <?php endif;
+            endforeach;?>
         </div><!--.products-->
     <?php endif;?>
 </article><!-- #post-## -->
