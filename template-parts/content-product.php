@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-product"); ?>>
     <?php $single_page_image = get_field("single_page_image");
-    $post = get_post();
+    $post = get_post(1092);
     setup_postdata( $post );
     $more_text = get_field("contact_us_text");
     if(!$more_text):
@@ -43,6 +43,12 @@
             <?php endif;?>
         </div><!--.col-2-->
     </div><!--.row-2-->
+    <?php $products_title = get_field("products_title","option");
+    if($products_title):?>
+        <header>
+            <h2><?php echo $products_title;?></h2>
+        </header>
+    <?php endif;?>
     <?php 
     $args = array(
         'post_type'=>'product',
