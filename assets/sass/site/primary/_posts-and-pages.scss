@@ -506,11 +506,11 @@
         padding: 20px; 
         @include flexbox();
         @include flexbox-justify(center);
-        @include flexbox-align-content(center);
-        @include flexbox-align-items(center);
+        @include flexbox-align-content(flex-start);
+        @include flexbox-align-items(flex-start);
         @include flexbox-direction(column);
         @media screen and (min-width: $tabwidth){
-            padding: 0 8%;
+            padding: 0 6%;
             @include flexbox-direction(row);
             @include flexbox-justify(space-between);
         }
@@ -520,14 +520,39 @@
                 width: 60%;
             }
             .posts {
+                margin-bottom: 10%;
                 .post {
+                    margin-top: 18%;
+                    &:first-child {
+                        margin-top: 0;
+                    }
                     >header {
-
+                        h1 {
+                            color: $color__helen-brown;
+                            font-size: 30px;
+                            font-weight: 700;
+                            margin: 0;
+                            @media screen and (min-width: $tabwidth){
+                                font-size: 60px;
+                            }
+                        }
                     }
                     .date {
+                        line-height: 1;
+                        margin-bottom: 20px;
+                        color: $color__helen-brown;
+                        font-size: 20px;
+                        @media screen and (min-width: $tabwidth){
+                            font-size: 25px;
+                            margin-bottom: 40px;
+                        }
 
                     }
                     .copy {
+                        margin-bottom: 20px;
+                        @media screen and (min-width: $tabwidth){
+                            margin-bottom: 30px;
+                        }
 
                     }
                     .more-link {
@@ -538,38 +563,257 @@
                             padding: 20px;
                             color: white;
                             text-transform: uppercase;
-                            font-size: 18px;
+                            font-size: 20px;
+                            text-align: center;
+                            text-decoration: none;
+                            @media screen and (min-width: $tabwidth){
+                                font-size: 25px;
+                            }
                         }
                     }
                 }
             }
             .pagi-posts {
-
+                ul {
+                    li {
+                        display: inline-block;
+                        margin: 15px 0;
+                        &.active {
+                            a {
+                                background-color: white;
+                                border: 1px solid $color__helen-blue;
+                                color: $color__helen-blue;
+                            }
+                        }
+                        a {
+                            background-color: $color__helen-blue;
+                            color: white;
+                            border: 1px solid $color__helen-blue;
+                            margin: 0 1px;
+                            border-radius: 0;
+                            &:hover {
+                                background-color: white;
+                                border: 1px solid $color__helen-blue;
+                                color: $color__helen-blue;
+                            }
+                        }
+                    }
+                }
             }
         }
         >.col-2 {
             width: 100%;
             @media screen and (min-width: $tabwidth){
-                width: 20%;
+                width: 25%;
             }
             >header {
                 background-color: $color__helen-blue;
                 display: block;
                 padding: 20px;
                 color: white;
-                text-transform: uppercase;
-                font-size: 18px;
+                margin-bottom: 20px;
+                @media screen and (min-width: $tabwidth){
+                    margin-bottom: 30px;
+                }
+                h2 {
+                    margin: 0;
+                    font-size: 20px;
+                    font-weight: 700;
+                    @media screen and (min-width: $tabwidth){
+                        font-size: 30px;
+                    }
+                }
             }
             .items {
                 margin-bottom: 20px;
                 .item {
+                    padding-left: 20px;
+                    margin-top: 10px;
                     a {
                         color: $color__helen-brown;
-                        font-size: 18px;
-                        margin-top: 20px;
+                        text-decoration: none;
                         &:hover{
                             color: $color__helen-brown;
                         }
+                        h3 {
+                            margin: 0;
+                            font-weight: 700;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.template-single {
+    >.row-1 {
+        padding: 20px; 
+        @include flexbox();
+        @include flexbox-justify(center);
+        @include flexbox-align-content(flex-start);
+        @include flexbox-align-items(flex-start);
+        @include flexbox-direction(column);
+        @media screen and (min-width: $tabwidth){
+            padding: 0 6%;
+            @include flexbox-direction(row);
+            @include flexbox-justify(space-between);
+        }
+        >.col-1 {
+            width: 100%;
+            @media screen and (min-width: $tabwidth){
+                width: 60%;
+            }
+            .post {
+                margin-bottom: 15%;
+                >header {
+                    h1 {
+                        color: $color__helen-brown;
+                        font-size: 30px;
+                        font-weight: 700;
+                        margin: 0;
+                        @media screen and (min-width: $tabwidth){
+                            font-size: 60px;
+                        }
+                    }
+                }
+                .date {
+                    line-height: 1;
+                    margin-bottom: 20px;
+                    color: $color__helen-brown;
+                    font-size: 20px;
+                    @media screen and (min-width: $tabwidth){
+                        font-size: 25px;
+                        margin-bottom: 40px;
+                    }
+
+                }
+                .copy {
+                    margin-bottom: 20px;
+                    @media screen and (min-width: $tabwidth){
+                        margin-bottom: 30px;
+                    }
+
+                }
+            }
+        }
+        >.col-2 {
+            width: 100%;
+            @media screen and (min-width: $tabwidth){
+                width: 25%;
+            }
+            >header {
+                background-color: $color__helen-blue;
+                display: block;
+                padding: 20px;
+                color: white;
+                margin-bottom: 20px;
+                @media screen and (min-width: $tabwidth){
+                    margin-bottom: 30px;
+                }
+                h2 {
+                    margin: 0;
+                    font-size: 20px;
+                    font-weight: 700;
+                    @media screen and (min-width: $tabwidth){
+                        font-size: 30px;
+                    }
+                }
+            }
+            .items {
+                margin-bottom: 20px;
+                .item {
+                    padding-left: 20px;
+                    margin-top: 10px;
+                    a {
+                        color: $color__helen-brown;
+                        text-decoration: none;
+                        &:hover{
+                            color: $color__helen-brown;
+                        }
+                        h3 {
+                            margin: 0;
+                            font-size: 20px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.template-page {
+    >header {
+        h1 {
+            color: $color__helen-brown;
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0;
+            padding: 0 20px;
+            @media screen and (min-width: $tabwidth){
+                font-size: 60px;
+                padding: 0 3%;
+            }
+        }
+    }
+    .copy {
+        margin-bottom: 20px;
+        padding: 0 20px;
+        @media screen and (min-width: $tabwidth){
+            margin-bottom: 15%;
+            padding: 0 6%;
+        }
+    }
+}
+.template-events {
+    header {
+        padding: 0 20px;
+        @media screen and (min-width: $tabwidth){
+            padding: 0 3%;
+        }
+        h1 {
+            margin: 0;
+            font-family: LuxRoyale;
+            font-size: 30px;
+            color: $color__helen-brown;
+            font-weight: 500;
+            @media screen and (min-width: $tabwidth){
+                font-size: 65px;
+            }
+        }
+    }
+    .events {
+        padding: 20px 0;
+        @media screen and (min-width: $tabwidth){
+            padding: 2% 0;
+        }
+        .event {
+            width: 100%;
+            padding: 20px;
+            position: relative;
+            @media screen and (min-width: $tabwidth){
+                float: left;
+                width: 1/2*100%;
+                padding: 4% 6%;
+            }
+            @media screen and (min-width: $deskwidth){
+                width: 1/3*100%;
+            }
+            img {
+                display: block;
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+            header {
+                margin-bottom: 20px;
+                h2 {
+                    margin: 0;
+                    font-family: LuxRoyale;
+                    font-size: 25px;
+                    color: $color__helen-brown;
+                    font-weight: 500;
+                    @media screen and (min-width: $tabwidth){
+                        font-size: 35px;
                     }
                 }
             }

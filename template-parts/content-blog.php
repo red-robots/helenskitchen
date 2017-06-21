@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class("template-blog"); ?>>
+<section id="post-<?php the_ID(); ?>" <?php post_class("template-blog"); ?>>
 	 <?php $banner_image = get_field("banner_image");
     $more_text = get_field("more_text");
     $recent_posts_text = get_field("recent_posts_text");
@@ -25,6 +25,7 @@
             <?php $args = array(
                 "post_type"=>"post",
                 "posts_per_page"=>2,
+                "paged"=>$paged,
                 "order"=>"DESC",
                 "orderby"=>"date"
             );
@@ -33,9 +34,9 @@
                 <div class="posts">
                     <?php while($query->have_posts()):$query->the_post();
                         $not_in[] = get_the_ID();?>
-                        <div class="post">
+                        <article class="post">
                             <header>
-                                <?php the_title();?>
+                                <h1><?php the_title();?></h1>
                             </header>
                             <div class="date">
                                 <?php the_date("M J,Y");?>
@@ -48,7 +49,7 @@
                                     <?php echo $more_text;?>
                                 </a>
                             </div><!--.more-link-->
-                        </div><!--.post-->
+                        </article><!--.post-->
                     <?php endwhile;?>
                 </div><!--.posts-->
                 <?php wp_reset_postdata();
@@ -57,9 +58,9 @@
                 <?php pagi_posts_nav_query($query);?>
             </div><!--.pagi-posts-->
         </div><!--.col-1-->
-        <div class="col-2">
+        <section class="col-2">
             <?php if($recent_posts_text):?>
-                <header><?php echo $recent_posts_text;?></header>
+                <header><h2><?php echo $recent_posts_text;?><h2></header>
             <?php endif;?>
             <?php $args = array(
                 "post_type"=>"post",
@@ -74,13 +75,13 @@
                     <?php while($query->have_posts()):$query->the_post();?>
                         <div class="item">
                             <a href="<?php echo get_the_permalink();?>">
-                                <?php the_title();?>
+                                <h3><?php the_title();?></h3>
                             </a>
                         </div><!--.item-->
                     <?php endwhile;?>
                 </div><!--.items-->
                 <?php wp_reset_postdata();
             endif;?>
-        </div><!--.col-2-->
+        </section><!--.col-2-->
     </div><!--.row-2-->
-</article><!-- #post-## -->
+</section><!-- #post-## -->
