@@ -40,7 +40,7 @@
         <div class="products clear-bottom">
             <?php while($query->have_posts()):$query->the_post();?>
                 <div class="product js-blocks">
-                    <?php $product_page_image = get_field("product_page_image");?>
+                    <?php $product_page_image = get_field("products_page_image");?>
                     <?php if($product_page_image):?>
                         <img src="<?php echo $product_page_image['sizes']['large'];?>" alt="<?php echo $product_page_image['alt'];?>">
                     <?php endif;?>

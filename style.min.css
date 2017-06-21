@@ -1530,7 +1530,20 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:600px){.error-404>header h1,.template-sitemap>header h1{font-size:35px}
 }.error-404 .copy,.template-sitemap .copy{padding:20px}
 @media screen and (min-width:600px){.error-404 .copy,.template-sitemap .copy{padding:5%}
-}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+}.template-blog img.banner{width:100%;display:block}
+.template-blog>.row-2{padding:20px;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+@media screen and (min-width:600px){.template-blog>.row-2{padding:0 8%;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-justify-content:space-between;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+}.template-blog>.row-2>.col-1{width:100%}
+@media screen and (min-width:600px){.template-blog>.row-2>.col-1{width:60%}
+}.template-blog>.row-2>.col-1 .posts .post .more-link{width:100%}
+.template-blog>.row-2>.col-1 .posts .post .more-link a{background-color:#91d0f9;display:block;padding:20px;color:white;text-transform:uppercase;font-size:18px}
+.template-blog>.row-2>.col-2{width:100%}
+@media screen and (min-width:600px){.template-blog>.row-2>.col-2{width:20%}
+}.template-blog>.row-2>.col-2>header{background-color:#91d0f9;display:block;padding:20px;color:white;text-transform:uppercase;font-size:18px}
+.template-blog>.row-2>.col-2 .items{margin-bottom:20px}
+.template-blog>.row-2>.col-2 .items .item a{color:#5d422f;font-size:18px;margin-top:20px}
+.template-blog>.row-2>.col-2 .items .item a:hover{color:#5d422f}
+.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
