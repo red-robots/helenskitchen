@@ -6350,7 +6350,7 @@ html[xmlns] .flexslider .slides {
           margin: 0; }
           @media screen and (min-width: 600px) {
             .template-blog > .row-2 > .col-1 .posts .post > header h1 {
-              font-size: 60px; } }
+              font-size: 50px; } }
         .template-blog > .row-2 > .col-1 .posts .post .date {
           line-height: 1;
           margin-bottom: 20px;
@@ -6480,7 +6480,7 @@ html[xmlns] .flexslider .slides {
         margin: 0; }
         @media screen and (min-width: 600px) {
           .template-single > .row-1 > .col-1 .post > header h1 {
-            font-size: 60px; } }
+            font-size: 50px; } }
       .template-single > .row-1 > .col-1 .post .date {
         line-height: 1;
         margin-bottom: 20px;

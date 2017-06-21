@@ -1539,7 +1539,7 @@ html[xmlns] .flexslider .slides{display:block}
 .template-blog>.row-2>.col-1 .posts .post{margin-top:18%}
 .template-blog>.row-2>.col-1 .posts .post:first-child{margin-top:0}
 .template-blog>.row-2>.col-1 .posts .post>header h1{color:#5d422f;font-size:30px;font-weight:700;margin:0}
-@media screen and (min-width:600px){.template-blog>.row-2>.col-1 .posts .post>header h1{font-size:60px}
+@media screen and (min-width:600px){.template-blog>.row-2>.col-1 .posts .post>header h1{font-size:50px}
 }.template-blog>.row-2>.col-1 .posts .post .date{line-height:1;margin-bottom:20px;color:#5d422f;font-size:20px}
 @media screen and (min-width:600px){.template-blog>.row-2>.col-1 .posts .post .date{font-size:25px;margin-bottom:40px}
 }.template-blog>.row-2>.col-1 .posts .post .copy{margin-bottom:20px}
@@ -1568,7 +1568,7 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:600px){.template-single>.row-1>.col-1{width:60%}
 }.template-single>.row-1>.col-1 .post{margin-bottom:15%}
 .template-single>.row-1>.col-1 .post>header h1{color:#5d422f;font-size:30px;font-weight:700;margin:0}
-@media screen and (min-width:600px){.template-single>.row-1>.col-1 .post>header h1{font-size:60px}
+@media screen and (min-width:600px){.template-single>.row-1>.col-1 .post>header h1{font-size:50px}
 }.template-single>.row-1>.col-1 .post .date{line-height:1;margin-bottom:20px;color:#5d422f;font-size:20px}
 @media screen and (min-width:600px){.template-single>.row-1>.col-1 .post .date{font-size:25px;margin-bottom:40px}
 }.template-single>.row-1>.col-1 .post .copy{margin-bottom:20px}
