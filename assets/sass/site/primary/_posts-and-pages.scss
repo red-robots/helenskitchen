@@ -782,6 +782,12 @@
             }
         }
     }
+    .copy {
+        padding: 20px 20px 0 20px;
+        @media screen and (min-width: $tabwidth){
+            padding: 6% 6% 0 6%;
+        }
+    }
     .events {
         padding: 20px 0;
         @media screen and (min-width: $tabwidth){

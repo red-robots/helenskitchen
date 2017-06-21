@@ -15,9 +15,11 @@
             <?php the_title();?>
         </h1>
     </header>
-    <div class="copy">
-        <?php the_content();?>
-    </div><!--.copy-->
+    <?php if(get_the_content( )):?>
+        <div class="copy">
+            <?php the_content();?>
+        </div><!--.copy-->
+    <?php endif;?>
     <?php $events = get_field("event");
     if($events):?>
         <div class="events clear-bottom">

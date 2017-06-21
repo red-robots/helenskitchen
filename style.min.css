@@ -1592,6 +1592,8 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:600px){.template-events header{padding:0 3%}
 }.template-events header h1{margin:0;font-family:LuxRoyale;font-size:30px;color:#5d422f;font-weight:500}
 @media screen and (min-width:600px){.template-events header h1{font-size:65px}
+}.template-events .copy{padding:20px 20px 0 20px}
+@media screen and (min-width:600px){.template-events .copy{padding:6% 6% 0 6%}
 }.template-events .events{padding:20px 0}
 @media screen and (min-width:600px){.template-events .events{padding:2% 0}
 }.template-events .events .event{width:100%;padding:20px;position:relative}
