@@ -26,8 +26,15 @@
             <?php endif;?>
         </div><!--.col-1-->
         <div class="col-2">
+            <?php $secondary_title = get_field("secondary-product-title");?>
             <header>
-                <h1><?php the_title();?></h1>
+                <h1>
+                    <?php if($secondary_title):
+                        echo $secondary_title;
+                    else:
+                        the_title();
+                    endif;?>
+                </h1>
             </header>
             <?php if(get_the_content()):?>
                 <div class="copy">
