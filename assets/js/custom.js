@@ -71,4 +71,17 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	new WOW().init();
 
+	$('a.popup').colorbox({
+		rel: 'gal',
+		inline: true,
+		width: '90%',
+		maxWidth: '960px',
+	});
+    $(window).on('resize', function () {
+        var width = window.innerWidth * 0.9 > 960 ? '960px' : '90%';
+        $.colorbox.resize({
+            width: width,
+        });
+    });
+
 });// END #####################################    END

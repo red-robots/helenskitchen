@@ -353,70 +353,6 @@
         .product {
             width: 100%;
             padding: 20px;
-            @media screen and (min-width: $tabwidth){
-                float: left;
-                width: 1/2*100%;
-                padding: 4% 6%;
-            }
-            @media screen and (min-width: $deskwidth){
-                width: 1/3*100%;
-            }
-            img {
-                display: block;
-                width: 100%;
-                margin: 0 0 20px 0;
-            }
-            header {
-                margin: 0 0 20px 0;
-                h2 {
-                    margin: 0;
-                    font-family: LuxRoyale;
-                    font-size: 30px;
-                    color: $color__helen-brown;
-                    font-weight: 500;
-                    text-align: center;
-                    @media screen and (min-width: $tabwidth){
-                        font-size: 40px;
-                    }
-                }
-            }
-            .copy {
-                width: 90%;
-                margin: 0 auto;
-                text-align: center;
-            }
-        }
-    }
-}
-.template-products {
-    img.banner {
-        width: 100%;
-        display: block;
-    }
-    header {
-        padding: 0 20px;
-        @media screen and (min-width: $tabwidth){
-            padding: 0 3%;
-        }
-        h1 {
-            margin: 0;
-            font-family: LuxRoyale;
-            font-size: 30px;
-            color: $color__helen-brown;
-            font-weight: 500;
-            @media screen and (min-width: $tabwidth){
-                font-size: 65px;
-            }
-        }
-    }
-    .products {
-        padding: 20px 0;
-        @media screen and (min-width: $tabwidth){
-            padding: 2% 0;
-        }
-        .product {
-            width: 100%;
-            padding: 20px;
             position: relative;
             @media screen and (min-width: $tabwidth){
                 float: left;
@@ -452,7 +388,99 @@
                 width: 100%;
                 @media screen and (min-width: $tabwidth){
                     position: absolute;
-                    bottom: 16%;
+                    bottom: 6%;
+                    left: 0;
+                }
+                a {
+                    display: block;
+                    background-color: $color__helen-blue;
+                    text-decoration: none;
+                    text-align: center;
+                    border-radius: 10px;
+                    padding: 10px;
+                    color: white;
+                    font-size: 20px;
+                    max-width: 200px;
+                    margin: 0 auto;
+                    @media screen and (min-width: $tabwidth){
+                        font-size: 25px;
+                    }
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+            .hidden {
+                display: none;
+            }
+        }
+    }
+}
+.template-products {
+    img.banner {
+        width: 100%;
+        display: block;
+    }
+    header {
+        padding: 0 20px;
+        @media screen and (min-width: $tabwidth){
+            padding: 0 3%;
+        }
+        h1 {
+            margin: 0;
+            font-family: LuxRoyale;
+            font-size: 30px;
+            color: $color__helen-brown;
+            font-weight: 500;
+            @media screen and (min-width: $tabwidth){
+                font-size: 65px;
+            }
+        }
+    }
+    .products {
+        padding: 20px 0;
+        @media screen and (min-width: $tabwidth){
+            padding: 2% 0;
+        }
+        .product {
+            width: 100%;
+            position: relative;
+            padding: 20px;
+            @media screen and (min-width: $tabwidth){
+                float: left;
+                width: 1/2*100%;
+                padding: 4% 6%;
+            }
+            @media screen and (min-width: $deskwidth){
+                width: 1/3*100%;
+            }
+            img {
+                display: block;
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+            header {
+                margin: 0 0 30px 0;
+                @media screen and (min-width: $tabwidth){
+                    margin: 0 0 120px 0;
+                }
+                h2 {
+                    margin: 0;
+                    font-family: LuxRoyale;
+                    font-size: 30px;
+                    color: $color__helen-brown;
+                    font-weight: 500;
+                    text-align: center;
+                    @media screen and (min-width: $tabwidth){
+                        font-size: 40px;
+                    }
+                }
+            }
+            .more {
+                width: 100%;
+                @media screen and (min-width: $tabwidth){
+                    position: absolute;
+                    bottom: 6%;
                     left: 0;
                 }
                 a {
@@ -747,6 +775,10 @@
     }
 }
 .template-page {
+    img.banner {
+        display: block;
+        width: 100%;
+    }
     >header {
         h1 {
             color: $color__helen-brown;

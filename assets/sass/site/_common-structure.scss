@@ -250,3 +250,83 @@
     color: $color__helen-light-brown;
   }
 }
+.popup-product {
+  background-color: white;
+  padding: 20px; 
+  @include flexbox();
+  @include flexbox-justify(center);
+  @include flexbox-align-content(center);
+  @include flexbox-align-items(center);
+  @include flexbox-direction(column);
+  @media screen and (min-width: $tabwidth){
+      padding: 8%;
+      @include flexbox-direction(row);
+  }
+  >.col-1 {
+      width: 100%;
+      @media screen and (min-width: $tabwidth){
+          width: 40%;
+      }
+      img {
+          width: 80%;
+          display: block;
+          margin: 0 auto;
+          @media screen and (min-width: $tabwidth){
+              width: 100%;
+              margin: 0;
+          }
+      }
+  }
+  >.col-2 {
+      width: 100%;
+      padding: 20px 0 0 0;
+      @media screen and (min-width: $tabwidth){
+          width: 60%;
+          padding: 0 0 0 2.5%;
+      }
+      header {
+          h2 {
+              margin: 0 0 20px 0;
+              font-family: LuxRoyale;
+              font-size: 25px;
+              color: $color__helen-brown;
+              font-weight: 500;
+              @media screen and (min-width: $tabwidth){
+                  font-size: 35px;
+              }
+          }
+      }
+      .copy {
+          width: 100%;
+          margin: 0 0 30px 0;
+          font-size: 16px;
+          @media screen and (min-width: $tabwidth){
+              width: 80%;
+              font-size: 18px;
+          }
+      }
+      .more {
+          display: block;
+          width: 100%;
+          @media screen and (min-width: $tabwidth){
+              width: 90%;
+          }
+          a {
+              display: block;
+              background-color: $color__helen-blue;
+              text-decoration: none;
+              text-align: center;
+              border-radius: 10px;
+              padding: 10px;
+              color: white;
+              font-size: 16px;
+              @media screen and (min-width: $tabwidth){
+                  font-size: 20px;
+              }
+              &:hover {
+                  color: white;
+              }
+          }
+      }
+  }
+}

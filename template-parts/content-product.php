@@ -22,7 +22,7 @@
     <div class="row-1">
         <div class="col-1">
             <?php if($single_page_image):?>
-                <img class="banner" src="<?php echo $single_page_image['sizes']['large'];?>" alt="<?php echo $single_page_image['alt'];?>">
+                <img src="<?php echo $single_page_image['sizes']['large'];?>" alt="<?php echo $single_page_image['alt'];?>">
             <?php endif;?>
         </div><!--.col-1-->
         <div class="col-2">
@@ -57,6 +57,10 @@
         </header>
     <?php endif;?>
     <?php $available_products = get_field("available_products");
+    $more_text_available_products = get_field("more_text_available_products");
+    if(!$more_text_available_products):
+        $more_text_available_products = "More Info";
+    endif;
     if($available_products):?>
         <div class="products clear-bottom">
             <?php foreach($available_products as $row):
@@ -68,14 +72,44 @@
                         <?php if($image):?>
                             <img src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>">
                         <?php endif;?>
-                        <header>
-                            <h2><?php echo $title;?></h2>
-                        </header>
-                        <?php if($description):?>
-                            <div class="copy">
-                                <?php echo $description;?>
-                            </div><!--.copy-->
+                        <?php if($title):?>
+                            <header>
+                                <h2><?php echo $title;?></h2>
+                            </header>
                         <?php endif;?>
+                        <div class="more">
+                            <a class="popup" href="#<?php echo sanitize_title_with_dashes($title);?>">
+                                <?php echo $more_text_available_products;?>
+                            </a>
+                        </div><!--.more-->
+                        <div class="hidden">
+                            <div class="wrapper popup-product" id="<?php echo sanitize_title_with_dashes($title);?>">
+                                <div class="col-1">
+                                    <?php if($image):?>
+                                        <img src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>">
+                                    <?php endif;?>
+                                </div><!--.col-1-->
+                                <div class="col-2">
+                                    <?php if($title):?>
+                                        <header>
+                                            <h2><?php echo $title;?></h2>
+                                        </header>
+                                    <?php endif;?>
+                                    <?php if($description):?>
+                                        <div class="copy">
+                                            <?php echo $description;?>
+                                        </div><!--.copy-->
+                                    <?php endif;
+                                    if($more_link):?>
+                                        <div class="more">
+                                            <a href="<?php echo $more_link;?>">
+                                                <?php echo $more_text;?>
+                                            </a>
+                                        </div><!--.more-->
+                                    <?php endif;?>
+                                </div><!--.col-2-->
+                            </div><!--.wrapper-->
+                        </div><!--.hidden-->
                     </div><!--.product--> 
                 <?php endif;
             endforeach;?>
