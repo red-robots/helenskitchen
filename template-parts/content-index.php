@@ -118,9 +118,21 @@
 		<div class="row-1">
 			<?php $title = get_field("section_5_title");
 			if($title):?>
-				<div class="title">
+				<h2 class="title">
 					<?php echo $title;?>
-				</div><!--.title-->
+				</h2><!--.title-->
+			<?php endif;?>
+			<?php $args = array(
+				'post_type'=>'post',
+				'post_per_page'=>3,
+				'orderby'=>'date',
+				'order'=>'DESC'
+			);
+			$query = new WP_Query( $args );
+			if($query->have_posts()):?>
+				<?php while($query->have_posts()): $query->the_post();?>
+					
+				<?php endwhile;?>
 			<?php endif;?>
 		</div><!--.row-1-->
 		<footer id="colophon" class="site-footer" role="contentinfo">

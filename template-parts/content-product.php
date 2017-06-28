@@ -69,19 +69,21 @@
                 $image = $row["image"];
                 if($title):?>
                     <div class="product js-blocks">
-                        <?php if($image):?>
-                            <img src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>">
-                        <?php endif;?>
-                        <?php if($title):?>
-                            <header>
-                                <h2><?php echo $title;?></h2>
-                            </header>
-                        <?php endif;?>
-                        <div class="more">
-                            <a class="popup" href="#<?php echo sanitize_title_with_dashes($title);?>">
-                                <?php echo $more_text_available_products;?>
-                            </a>
-                        </div><!--.more-->
+                        <a class="popup" href="#<?php echo sanitize_title_with_dashes($title);?>">
+                            <?php if($image):?>
+                                <img src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>">
+                            <?php endif;?>
+                            <?php if($title):?>
+                                <header>
+                                    <h2><?php echo $title;?></h2>
+                                </header>
+                            <?php endif;?>
+                            <div class="more">
+                                <div class="link">
+                                    <?php echo $more_text_available_products;?>
+                                </div><!--.link-->
+                            </div><!--.more-->
+                        </a>
                         <div class="hidden">
                             <div class="wrapper popup-product" id="<?php echo sanitize_title_with_dashes($title);?>">
                                 <div class="col-1">

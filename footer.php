@@ -20,17 +20,17 @@
 		if($facebook_link||$instagram_link||$pinterest_link):?>
 			<div class="row-1">
 				<?php if($facebook_link):?>
-					<a href="<?php echo $facebook_link;?>">
+					<a href="<?php echo $facebook_link;?>" target="_blank">
 						<i class="fa fa-facebook"></i>
 					</a>
 				<?php endif;?>
 				<?php if($instagram_link):?>
-					<a href="<?php echo $instagram_link;?>">
+					<a href="<?php echo $instagram_link;?>" target="_blank">
 						<i class="fa fa-instagram"></i>
 					</a>
 				<?php endif;?>
 				<?php if($pinterest_link):?>
-					<a href="<?php echo $pinterest_link;?>">
+					<a href="<?php echo $pinterest_link;?>" target="_blank">
 						<i class="fa fa-pinterest"></i>
 					</a>
 				<?php endif;?>

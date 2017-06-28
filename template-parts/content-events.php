@@ -10,6 +10,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-events"); ?>>
+    <?php $banner_image = get_field("banner_image");
+    if($banner_image):?>
+        <img class="banner" src="<?php echo $banner_image['url'];?>" alt="<?php echo $banner_image['alt'];?>">
+    <?php endif;?>
     <header>
         <h1>
             <?php the_title();?>

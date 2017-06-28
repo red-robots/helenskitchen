@@ -41,17 +41,19 @@
             <?php while($query->have_posts()):$query->the_post();?>
                 <div class="product js-blocks">
                     <?php $product_page_image = get_field("products_page_image");?>
-                    <?php if($product_page_image):?>
-                        <img src="<?php echo $product_page_image['sizes']['large'];?>" alt="<?php echo $product_page_image['alt'];?>">
-                    <?php endif;?>
-                    <header>
-                        <h2><?php the_title();?></h2>
-                    </header>
-                    <div class="more">
-                        <a href="<?php echo get_the_permalink();?>">
-                            <?php echo $more_text;?>
-                        </a>
-                    </div><!--.more-->
+                    <a href="<?php echo get_the_permalink();?>">
+                        <?php if($product_page_image):?>
+                            <img src="<?php echo $product_page_image['sizes']['large'];?>" alt="<?php echo $product_page_image['alt'];?>">
+                        <?php endif;?>
+                        <header>
+                            <h2><?php the_title();?></h2>
+                        </header>
+                        <div class="more">
+                            <div class="link">
+                                <?php echo $more_text;?>
+                            </div><!--.link-->
+                        </div><!--.more-->
+                    </a>
                 </div><!--.product--> 
             <?php endwhile;?>
         </div><!--.products-->
