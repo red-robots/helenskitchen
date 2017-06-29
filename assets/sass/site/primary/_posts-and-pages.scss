@@ -3,239 +3,245 @@
         width: 100%;
     }
     >.section-1 {
-        position: relative;
-        @include flexbox();
-        @include flexbox-justify(stretch);
-        @include flexbox-direction(column);
-        @include flexbox-align-content(stretch);
-        @include flexbox-align-items(stretch);
-        #masthead {
-            @include flexbox-align-self(flex-start);
-            background-color: white;
-        }
-        >.row-1 {
-            background-size: cover;
-            background-position: center;
-            @include flexbox-flex(1,1,auto);
+        >.wrapper {
+            position: relative;
+            height: 100%;
             @include flexbox();
-            @include flexbox-justify(flex-end);
+            @include flexbox-justify(stretch);
             @include flexbox-direction(column);
-            @include flexbox-align-content(flex-end);
-            @include flexbox-align-items(flex-end);
-            .text {
-                font-family: LuxRoyale;
-                line-height: 1.2;
-                color: $color__helen-brown;
-                margin: auto 20px 20px 20px;
-                padding-top: 20px;
-                font-size: 20px;
-                @media screen and (min-width: $tabwidth){
-                    font-size: 45px;
-                    padding-top: 0;
-                    margin: auto 5% 5% 0;
+            @include flexbox-align-content(stretch);
+            @include flexbox-align-items(stretch);
+            #masthead {
+                @include flexbox-align-self(flex-start);
+                background-color: white;
+            }
+            >.row-1 {
+                background-size: cover;
+                background-position: center;
+                @include flexbox-flex(1,1,auto);
+                @include flexbox();
+                @include flexbox-justify(flex-end);
+                @include flexbox-direction(column);
+                @include flexbox-align-content(flex-end);
+                @include flexbox-align-items(flex-end);
+                .text {
+                    font-family: LuxRoyale;
+                    line-height: 1.2;
+                    color: $color__helen-brown;
+                    margin: auto 20px 20px 20px;
+                    padding-top: 20px;
+                    font-size: 20px;
+                    @media screen and (min-width: $tabwidth){
+                        font-size: 45px;
+                        padding-top: 0;
+                        margin: auto 5% 5% 0;
+                    }
                 }
             }
-        }
-        img.divot {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            display: block;
-            left: 0;
+            img.divot {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                display: block;
+                left: 0;
+            }
         }
     }
     >.section-2 {
-        @include flexbox();
-        @include flexbox-justify(center);
-        @include flexbox-direction(column);
-        @include flexbox-align-content(center);
-        @include flexbox-align-items(center);
-        color: $color__helen-brown;
-        text-align: center;
-        padding: 20px;
-        @media screen and (min-width: $tabwidth){
-            padding: 20px 0;
-        }
-        >.row-1 {
-            font-family: LuxRoyale;
-            width: 100%;
-            font-size: 20px;
-            margin-bottom: 4.5%;
-            line-height: 1.2;
+        >.wrapper {
+            @include flexbox();
+            @include flexbox-justify(center);
+            @include flexbox-direction(column);
+            @include flexbox-align-content(center);
+            @include flexbox-align-items(center);
+            color: $color__helen-brown;
+            text-align: center;
+            padding: 20px;
+            height: 100%;
             @media screen and (min-width: $tabwidth){
-                font-size: 45px;
+                padding: 20px 0;
             }
-        }
-        >.row-2 {
-            width: 100%;
-            img {
-                display: block;
+            >.row-1 {
+                font-family: LuxRoyale;
                 width: 100%;
+                font-size: 20px;
+                margin-bottom: 4.5%;
+                line-height: 1.2;
+                @media screen and (min-width: $tabwidth){
+                    font-size: 45px;
+                }
             }
-        }
-        >.row-3 {
-            width: 70%;
+            >.row-2 {
+                width: 100%;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            >.row-3 {
+                width: 70%;
 
+            }
         }
     }
     >.section-3 {
-        position: relative;
-        padding: 20px 0; 
-        background-color: $color__helen-blue;
-        @include flexbox();
-        @include flexbox-justify(center);
-        @include flexbox-align-content(center);
-        @include flexbox-align-items(center);
-        @include flexbox-direction(column);
-        @media screen and (min-width: $tabwidth){
-            padding: 3% 0;
-            @include flexbox-direction(row);
-        }
-        >.col-1 {
-            width: 100%;
-            padding: 0;
+        >.wrapper {
+            position: relative;
+            padding: 20px 0; 
+            background-color: $color__helen-blue;
+            @include flexbox();
+            @include flexbox-justify(center);
+            @include flexbox-align-content(center);
+            @include flexbox-align-items(center);
+            @include flexbox-direction(column);
+            height: 100%;
             @media screen and (min-width: $tabwidth){
-                width: 50%;
-                padding: 0 2.5% 0 0;
+                padding: 3% 0;
+                @include flexbox-direction(row);
             }
-            img {
-                display: block;
+            >.col-1 {
                 width: 100%;
-            }
-        }
-        >.col-2 {
-            color: white;
-            padding: 20px 20px 0 20px;
-            width: 100%;
-            @media screen and (min-width: $tabwidth){
-                width: 50%;
-                padding: 0 12% 0 2.5%;
-            }
-            .title {
-                font-family: LuxRoyale;
-                line-height: 1.2;
-                font-size: 20px;
-                margin-bottom: 8%;
+                padding: 0;
                 @media screen and (min-width: $tabwidth){
-                    font-size: 65px;
+                    width: 50%;
+                    padding: 0 2.5% 0 0;
                 }
-            }
-            .copy {
-                color: white;
-                margin-bottom: 5%;
-
-            }
-            .button {
-                border: 1px solid white;
-                border-radius: 10px;
-                display: inline-block;
-                font-family: 'Rubik', sans-serif;
-                a {
-                    color: white;
+                img {
                     display: block;
+                    width: 100%;
+                }
+            }
+            >.col-2 {
+                color: white;
+                padding: 20px 20px 0 20px;
+                width: 100%;
+                @media screen and (min-width: $tabwidth){
+                    width: 50%;
+                    padding: 0 12% 0 2.5%;
+                }
+                .title {
+                    font-family: LuxRoyale;
                     line-height: 1;
-                    text-align: center;
-                    padding: 20px;
                     font-size: 20px;
-                    text-transform: uppercase;
-                    text-decoration: none;
+                    margin-bottom: 8%;
                     @media screen and (min-width: $tabwidth){
-                        font-size: 35px;
+                        font-size: 65px;
                     }
-                    &:hover {
+                }
+                .copy {
+                    color: white;
+                    margin-bottom: 5%;
+
+                }
+                .button {
+                    border: 1px solid white;
+                    border-radius: 10px;
+                    display: inline-block;
+                    font-family: 'Rubik', sans-serif;
+                    a {
                         color: white;
+                        display: block;
+                        line-height: 1;
+                        text-align: center;
+                        padding: 20px;
+                        font-size: 20px;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        @media screen and (min-width: $tabwidth){
+                            font-size: 35px;
+                        }
+                        &:hover {
+                            color: white;
+                        }
                     }
                 }
             }
-        }
-        img.divot {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            display: block;
-            left: 0;
+            img.divot {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                display: block;
+                left: 0;
+            }
         }
     }
     >.section-4 {
-        padding: 20px 0; 
-        @include flexbox();
-        @include flexbox-justify(center);
-        @include flexbox-align-content(center);
-        @include flexbox-align-items(center);
-        @include flexbox-direction(column);
-        @media screen and (min-width: $tabwidth){
-            padding: 3% 0;
-            @include flexbox-direction(row);
-        }
-        >.col-1 {
-            color: $color__helen-light-brown;
-            padding: 0 20px 20px 20px;
-            width: 100%;
-            text-align: right;
+        >.wrapper {
+            padding: 20px 0; 
+            @include flexbox();
+            @include flexbox-justify(center);
+            @include flexbox-align-content(center);
+            @include flexbox-align-items(center);
+            @include flexbox-direction(column);
+            height: 100%;
             @media screen and (min-width: $tabwidth){
-                width: 50%;
-                padding: 0 2.5% 0 12%;
+                padding: 3% 0;
+                @include flexbox-direction(row);
             }
-            .title {
-                font-family: LuxRoyale;
-                line-height: 1.2;
-                font-size: 20px;
-                margin-bottom: 8%;
-                @media screen and (min-width: $tabwidth){
-                    font-size: 65px;
-                }
-            }
-            .copy {
+            >.col-1 {
                 color: $color__helen-light-brown;
-                margin-bottom: 5%;
-
-            }
-            .button {
-                border: 1px solid $color__helen-blue;
-                border-radius: 10px;
-                display: inline-block;
-                font-family: 'Rubik', sans-serif;
-                a {
-                    color: $color__helen-blue;
-                    display: block;
-                    line-height: 1;
-                    text-align: center;
-                    padding: 20px;
+                padding: 0 20px 20px 20px;
+                width: 100%;
+                text-align: right;
+                @media screen and (min-width: $tabwidth){
+                    width: 50%;
+                    padding: 0 2.5% 0 12%;
+                }
+                .title {
+                    font-family: LuxRoyale;
+                    line-height: 1.2;
                     font-size: 20px;
-                    text-transform: uppercase;
-                    text-decoration: none;
+                    margin-bottom: 8%;
                     @media screen and (min-width: $tabwidth){
-                        font-size: 35px;
+                        font-size: 65px;
                     }
-                    &:hover {
-                        color: white;
+                }
+                .copy {
+                    color: $color__helen-light-brown;
+                    margin-bottom: 5%;
+
+                }
+                .button {
+                    border: 1px solid $color__helen-blue;
+                    border-radius: 10px;
+                    display: inline-block;
+                    font-family: 'Rubik', sans-serif;
+                    a {
+                        color: $color__helen-blue;
+                        display: block;
+                        line-height: 1;
+                        text-align: center;
+                        padding: 20px;
+                        font-size: 20px;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        @media screen and (min-width: $tabwidth){
+                            font-size: 35px;
+                        }
+                        &:hover {
+                            color: white;
+                        }
                     }
                 }
             }
-        }
-        >.col-2 {
-            width: 100%;
-            padding: 0;
-            @media screen and (min-width: $tabwidth){
-                width: 50%;
-                padding: 0 2.5% 0 0;
-            }
-            img {
-                display: block;
+            >.col-2 {
                 width: 100%;
+                padding: 0;
+                @media screen and (min-width: $tabwidth){
+                    width: 50%;
+                    padding: 0 2.5% 0 0;
+                }
+                img {
+                    display: block;
+                    width: 100%;
+                }
             }
         }
     }
     >.section-5 {
-        background-color: $color__helen-light-brown;
-        @include flexbox();
-        @include flexbox-justify(center);
-        @include flexbox-align-content(center);
-        @include flexbox-align-items(center);
-        @include flexbox-direction(column);
-        >.row-1 {
-            width: 100%;
-            @include flexbox-flex(1,1,auto);
+        >.wrapper {
+            background-color: $color__helen-light-brown;
+            height: 100%;
             padding: 20px;
             @media screen and (min-width: $tabwidth){
                 padding: 3% 5%;
@@ -253,7 +259,76 @@
                 }
             }
         }
-        #colophon {
+    }
+    >.section-6 {
+        >.wrapper {
+            @include flexbox();
+            @include flexbox-justify(center);
+            @include flexbox-align-content(center);
+            @include flexbox-align-items(center);
+            @include flexbox-direction(column);
+            height: 100%;
+            >.row-1 {
+                position: relative;
+                padding: 20px 0; 
+                width: 100%;
+                background-color: $color__helen-blue;
+                @include flexbox-flex(1,1,auto);
+                @include flexbox();
+                @include flexbox-justify(center);
+                @include flexbox-align-content(center);
+                @include flexbox-align-items(center);
+                @include flexbox-direction(column);
+                height: 100%;
+                @media screen and (min-width: $tabwidth){
+                    padding: 3% 0;
+                    @include flexbox-direction(row);
+                }
+                >.col-1 {
+                    width: 100%;
+                    padding: 0;
+                    @media screen and (min-width: $tabwidth){
+                        width: 50%;
+                        padding: 0 2.5%;
+                    }
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                >.col-2 {
+                    color: white;
+                    padding: 20px 20px 0 20px;
+                    width: 100%;
+                    @media screen and (min-width: $tabwidth){
+                        width: 50%;
+                        padding: 0 12% 0 2.5%;
+                    }
+                    .title {
+                        font-family: LuxRoyale;
+                        line-height: 1;
+                        font-size: 20px;
+                        margin-bottom: 8%;
+                        @media screen and (min-width: $tabwidth){
+                            font-size: 65px;
+                        }
+                    }
+                    .copy {
+                        color: white;
+                        margin-bottom: 5%;
+
+                    }
+                }
+                img.divot {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    display: block;
+                    left: 0;
+                }
+            }
+            #colophon {
+            }
         }
     }
 }
@@ -401,6 +476,7 @@
                     @media screen and (min-width: $tabwidth){
                         position: absolute;
                         bottom: 9.5%;
+                        bottom: 4vw;
                         left: 0;
                     }
                     .link {
@@ -451,10 +527,17 @@
             }
         }
     }
+    >.copy {
+
+        padding: 20px;
+        @media screen and (min-width: $tabwidth){
+            padding: 2% 6%;
+        }
+    }
     .products {
         padding: 20px 0;
         @media screen and (min-width: $tabwidth){
-            padding: 2% 0;
+            padding: 0 0 2% 0;
         }
         .product {
             width: 100%;
@@ -499,6 +582,7 @@
                     @media screen and (min-width: $tabwidth){
                         position: absolute;
                         bottom: 9.5%;
+                        bottom: 4vw;
                         left: 0;
                     }
                     .link {
@@ -553,8 +637,23 @@
         width: 100%;
         display: block;
     }
-    >.row-2 {
-        padding: 20px; 
+    >header.row-2 {
+        h1 {
+            color: $color__helen-brown;
+            font-size: 30px;
+            font-family: LuxRoyale;
+            font-weight: 500;
+            margin: 0;
+            line-height: 1.2;
+            padding: 20px;
+            @media screen and (min-width: $tabwidth){
+                font-size: 65px;
+                padding: 3%;
+            }
+        }
+    }
+    >.row-3 {
+        padding: 0 20px; 
         @include flexbox();
         @include flexbox-justify(center);
         @include flexbox-align-content(flex-start);
@@ -802,12 +901,14 @@
         h1 {
             color: $color__helen-brown;
             font-size: 30px;
-            font-weight: 700;
+            font-family: LuxRoyale;
+            font-weight: 500;
+            line-height: 1.2;
             margin: 0;
-            padding: 0 20px;
+            padding: 20px;
             @media screen and (min-width: $tabwidth){
-                font-size: 60px;
-                padding: 0 3%;
+                font-size: 65px;
+                padding: 3%;
             }
         }
     }
@@ -825,10 +926,10 @@
         width: 100%;
         display: block;
     }
-    header {
-        padding: 0 20px;
+    >header {
+        padding: 20px 20px 0 20px;
         @media screen and (min-width: $tabwidth){
-            padding: 0 3%;
+            padding: 3% 3% 0 3%;
         }
         h1 {
             margin: 0;
@@ -842,7 +943,7 @@
             }
         }
     }
-    .copy {
+    >.copy {
         padding: 20px 20px 0 20px;
         @media screen and (min-width: $tabwidth){
             padding: 6% 6% 0 6%;
@@ -871,7 +972,6 @@
                 margin: 0 0 20px 0;
             }
             header {
-                margin-bottom: 20px;
                 h2 {
                     margin: 0;
                     font-family: LuxRoyale;
@@ -881,6 +981,42 @@
                     font-weight: 500;
                     @media screen and (min-width: $tabwidth){
                         font-size: 35px;
+                    }
+                }
+            }
+            >.copy {
+                margin-top: 20px;
+                font-size: 16px;
+                padding: 0 0 30px 0;
+                @media screen and (min-width: $tabwidth){
+                    padding: 0 0 150px 0;
+                    font-size: 18px;
+                }
+            }
+            .more {
+                width: 100%;
+                @media screen and (min-width: $tabwidth){
+                    position: absolute;
+                    bottom: 5%;
+                    bottom: 4vw;
+                    left: 0;
+                }
+                a {
+                    display: block;
+                    background-color: $color__helen-blue;
+                    text-decoration: none;
+                    text-align: center;
+                    border-radius: 10px;
+                    padding: 10px;
+                    color: white;
+                    font-size: 20px;
+                    max-width: 200px;
+                    margin: 0 auto;
+                    @media screen and (min-width: $tabwidth){
+                        font-size: 25px;
+                    }
+                    &:hover {
+                        color: white;
                     }
                 }
             }

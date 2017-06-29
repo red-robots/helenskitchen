@@ -18,9 +18,12 @@
     endif;
     if($banner_image):?>
         <img class="banner row-1" src="<?php echo $banner_image['url'];?>" alt="<?php echo $banner_image['alt'];?>">
-    <?php endif;
-    $not_in = array();?>
-    <div class="row-2">
+    <?php endif;?>
+    <header class="row-2">
+        <h1><?php the_title();?></h1>
+    </header>
+    <?php $not_in = array();?>
+    <div class="row-3">
         <div class="col-1">
             <?php $args = array(
                 "post_type"=>"post",
@@ -39,7 +42,7 @@
                                 <h1><?php the_title();?></h1>
                             </header>
                             <div class="date">
-                                <?php the_date("M J,Y");?>
+                                <?php the_date("M j,Y");?>
                             </div><!--.row-2-->
                             <div class="copy">
                                 <?php the_content('');?>
@@ -83,5 +86,5 @@
                 <?php wp_reset_postdata();
             endif;?>
         </section><!--.col-2-->
-    </div><!--.row-2-->
+    </div><!--.row-3-->
 </section><!-- #post-## -->

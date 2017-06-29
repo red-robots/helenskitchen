@@ -50,18 +50,18 @@
             <?php endif;?>
         </div><!--.col-2-->
     </div><!--.row-1-->
-    <?php $products_title = get_field("products_title","option");
-    if($products_title):?>
-        <header class="row-2">
-            <h2><?php echo $products_title;?></h2>
-        </header>
-    <?php endif;?>
+    <?php $products_title = get_field("products_title","option");?>
     <?php $available_products = get_field("available_products");
     $more_text_available_products = get_field("more_text_available_products");
     if(!$more_text_available_products):
         $more_text_available_products = "More Info";
     endif;
-    if($available_products):?>
+    if($available_products):
+        if($products_title):?>
+            <header class="row-2">
+                <h2><?php echo $products_title;?></h2>
+            </header>
+        <?php endif;?>
         <div class="products clear-bottom">
             <?php foreach($available_products as $row):
                 $title = $row["title"];

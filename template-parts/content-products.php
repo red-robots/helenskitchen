@@ -21,6 +21,9 @@
     <header>
         <h1><?php the_title();?></h1>
     </header>
+    <div class="copy">
+        <?php the_content();?>
+    </div><!--.copy-->
     <?php $product_type = get_field("product_type");
     $args = array(
         'post_type'=>'product',

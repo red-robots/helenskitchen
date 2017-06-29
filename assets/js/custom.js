@@ -76,6 +76,9 @@ jQuery(document).ready(function ($) {
 		inline: true,
 		width: '90%',
 		maxWidth: '960px',
+		close: '<i class="fa fa-times"></i>',
+		previous: '<i class="fa fa-chevron-left"></i>',
+		next: '<i class="fa fa-chevron-right"></i>'
 	});
     $(window).on('resize', function () {
         var width = window.innerWidth * 0.9 > 960 ? '960px' : '90%';
