@@ -27,10 +27,11 @@
   }
   a {
     text-decoration: none;
-    color: black;
+    color: $color__helen-blue;
     position: relative;
     &:hover {
-      color: black;
+      color: $color__helen-blue;
+      text-decoration: underline;
     }
   }
   h1, h2, h3 {
@@ -108,6 +109,12 @@
       margin-bottom: 1%;
       width: 50%;
     }
+    @media screen and (min-width: $deskwidth){
+      width: 55%;
+    }
+    @media screen and (min-width: $widewidth){
+      width: 50%;
+    }
     &.toggled {
       button {
         margin-bottom: 10px;
@@ -156,7 +163,10 @@
             text-decoration: none;
             color: $color__helen-light-brown;
             font-size: 18px;
-            @media screen and (min-width: $tabwidth){
+            @media screen and (min-width: $deskwidth){
+              font-size: 16px;
+            }
+            @media screen and (min-width: $widewidth){
               font-size: 20px;
             }
             &:hover {

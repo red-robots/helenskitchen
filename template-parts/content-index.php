@@ -132,15 +132,27 @@
 			<?php endif;?>
 			<?php $args = array(
 				'post_type'=>'post',
-				'post_per_page'=>3,
+				'posts_per_page'=>3,
 				'orderby'=>'date',
 				'order'=>'DESC'
 			);
 			$query = new WP_Query( $args );
 			if($query->have_posts()):?>
-				<?php while($query->have_posts()): $query->the_post();?>
-					<?php the_title();?>
-				<?php endwhile;?>
+				<div class="posts">
+					<?php while($query->have_posts()): $query->the_post();?>
+						<?php $image = get_field("featured_image");
+						if($image):?>
+							<div class="post">
+								<img src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>">
+								<header><h2><?php the_title();?></h2></header>
+								<div class="hidden copy">
+									<header><h2><?php the_title();?></h2></header>
+									<?php the_content('<br><span class="read-more">Read More</span>');?>
+								</div><!--.hidden-->
+							</div><!--.post-->
+						<?php endif;
+					endwhile;?>
+				</div><!--.posts-->
 				<?php $post = get_post(5);
 				setup_postdata( $post );
 			endif;?>
