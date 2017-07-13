@@ -68,7 +68,7 @@
             <?php $args = array(
                 "post_type"=>"post",
                 "post__not_in"=>$not_in,
-                "posts_per_page"=>5,
+                "posts_per_page"=>25,
                 "order"=>"DESC",
                 "orderby"=>"date"
             );

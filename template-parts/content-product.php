@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-product"); ?>>
     <?php $single_page_image = get_field("single_page_image");
-    $post = get_post(1092);
+    $post = get_post(46);
     setup_postdata( $post );
     $more_text = get_field("contact_us_text");
     if(!$more_text):
@@ -69,7 +69,7 @@
                 $image = $row["image"];
                 if($title):?>
                     <div class="product js-blocks">
-                        <a class="popup" href="#<?php echo sanitize_title_with_dashes($title);?>">
+                        <a class="popup" href="#<?php echo sanitize_title_with_dashes(preg_replace('/[^a-zA-Z0-9\s]/','',$title));?>">
                             <?php if($image):?>
                                 <img src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>">
                             <?php endif;?>
@@ -85,7 +85,7 @@
                             </div><!--.more-->
                         </a>
                         <div class="hidden">
-                            <div class="wrapper popup-product" id="<?php echo sanitize_title_with_dashes($title);?>">
+                            <div class="wrapper popup-product" id="<?php echo sanitize_title_with_dashes(preg_replace('/[^a-zA-Z0-9\s]/','',$title));?>">
                                 <div class="col-1">
                                     <?php if($image):?>
                                         <img src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>">

@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-events"); ?>>
     <?php $banner_image = get_field("banner_image");
-    $post = get_post(1092);
+    $post = get_post(46);
     setup_postdata( $post );
     $more_text = get_field("contact_us_text");
     if(!$more_text):

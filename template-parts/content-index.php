@@ -49,7 +49,7 @@
 				</div><!--.row-2-->
 			<?php endif;
 			if($copy):?>
-				<div class="row-3">
+				<div class="row-3 copy">
 					<?php echo $copy;?>
 				</div><!--.row-3-->
 			<?php endif;?>
@@ -143,10 +143,11 @@
 						<?php $image = get_field("featured_image");
 						if($image):?>
 							<div class="post">
-								<img src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>">
-								<header><h2><?php the_title();?></h2></header>
+								<div class="wrapper">
+									<img src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>">
+									<header class="hidden"><h2><?php the_title();?></h2></header>
+								</div><!--.wrapper-->
 								<div class="hidden copy">
-									<header><h2><?php the_title();?></h2></header>
 									<?php the_content('<br><span class="read-more">Read More</span>');?>
 								</div><!--.hidden-->
 							</div><!--.post-->

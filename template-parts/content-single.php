@@ -22,7 +22,7 @@
 					<h1><?php the_title();?><h1>
 				</header>
 				<div class="date">
-					<?php the_date("M J,Y");?>
+					<?php the_date("M j,Y");?>
 				</div><!--.row-2-->
 				<div class="copy">
 					<?php the_content();?>

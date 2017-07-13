@@ -6,11 +6,7 @@
  */
 
 jQuery(document).ready(function ($) {
-	if('body.home'){
-		$.scrollify({
-			section : ".section",
-		});
-	}
+	
 	/*
 	*
 	*	Current Page Active
@@ -85,6 +81,18 @@ jQuery(document).ready(function ($) {
         $.colorbox.resize({
             width: width,
         });
-    });
+	});
+	$('.template-index >.section-5 >.wrapper .posts .post').click(function(e){
+		var $this = $(this);
+		if(!$(e.target).is('a') && !$(e.target).hasClass('read-more')) {
+			if($this.hasClass('toggled')){
+				$this.removeClass('toggled');
+				$this.find('.hidden').hide(150);
+			} else {
+				$this.addClass('toggled');
+				$this.find('.hidden').show(150);
+			}
+		}
+	})
 
 });// END #####################################    END
