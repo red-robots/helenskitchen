@@ -6,25 +6,14 @@
         >.wrapper {
             position: relative;
             height: 100%;
-            @include flexbox();
-            @include flexbox-justify(stretch);
-            @include flexbox-direction(column);
-            @include flexbox-align-content(stretch);
-            @include flexbox-align-items(stretch);
             #masthead {
-                @include flexbox-align-self(flex-start);
                 background-color: white;
             }
             >.row-1 {
                 background-size: cover;
                 background-position: center;
                 padding: 30% 0 0 0;
-                @include flexbox-flex(1,1,auto);
-                @include flexbox();
-                @include flexbox-justify(flex-end);
-                @include flexbox-direction(column);
-                @include flexbox-align-content(flex-end);
-                @include flexbox-align-items(flex-end);
+                text-align: right;
                 @media screen and (min-width: $tabwidth){
                     padding: 40% 0 0 0;
                 }
@@ -32,13 +21,12 @@
                     font-family: $font__header;
                     line-height: 1.2;
                     color: $color__helen-brown;
-                    margin: auto 20px 20px 20px;
-                    padding-top: 20px;
+                    padding: 20px;
                     font-size: 30px;
                     @media screen and (min-width: $tabwidth){
                         font-size: 35px;
                         padding-top: 0;
-                        margin: auto 5% 5% 0;
+                        padding: 0 5% 5% 0;
                     }
                     @media screen and (min-width: $midwidth){
                         font-size: 45px;
@@ -107,12 +95,14 @@
             height: 100%;
             @media screen and (min-width: $tabwidth){
                 padding: 3% 0 5.2% 0;
+            }
+            @media screen and (min-width: $midwidth){
                 @include flexbox-direction(row);
             }
             >.col-1 {
                 width: 100%;
                 padding: 0;
-                @media screen and (min-width: $tabwidth){
+                @media screen and (min-width: $midwidth){
                     width: 50%;
                     padding: 0 2.5% 0 0;
                 }
@@ -125,7 +115,7 @@
                 color: white;
                 padding: 20px 20px 0 20px;
                 width: 100%;
-                @media screen and (min-width: $tabwidth){
+                @media screen and (min-width: $midwidth){
                     width: 50%;
                     padding: 0 12% 0 2.5%;
                 }
@@ -189,6 +179,8 @@
             height: 100%;
             @media screen and (min-width: $tabwidth){
                 padding: 3% 0;
+            }
+            @media screen and (min-width: $midwidth){
                 @include flexbox-direction(row);
             }
             >.col-1 {
@@ -196,7 +188,7 @@
                 padding: 0 20px 20px 20px;
                 width: 100%;
                 text-align: right;
-                @media screen and (min-width: $tabwidth){
+                @media screen and (min-width: $midwidth){
                     width: 50%;
                     padding: 0 2.5% 0 12%;
                 }
@@ -243,7 +235,7 @@
             >.col-2 {
                 width: 100%;
                 padding: 0;
-                @media screen and (min-width: $tabwidth){
+                @media screen and (min-width: $midwidth){
                     width: 50%;
                     padding: 0 2.5% 0 0;
                 }
@@ -356,18 +348,12 @@
     }
     >.section-6 {
         >.wrapper {
-            @include flexbox();
-            @include flexbox-justify(center);
-            @include flexbox-align-content(center);
-            @include flexbox-align-items(center);
-            @include flexbox-direction(column);
             height: 100%;
             >.row-1 {
                 position: relative;
-                padding: 20px 0; 
+                padding: 0 0 20px 0; 
                 width: 100%;
                 background-color: $color__helen-blue;
-                @include flexbox-flex(1,1,auto);
                 @include flexbox();
                 @include flexbox-justify(center);
                 @include flexbox-align-content(center);
@@ -375,13 +361,16 @@
                 @include flexbox-direction(column);
                 height: 100%;
                 @media screen and (min-width: $tabwidth){
+                    padding: 0 0 5.2% 0;
+                }
+                @media screen and (min-width: $midwidth){
                     padding: 3% 0 5.2% 0;
                     @include flexbox-direction(row);
                 }
                 >.col-1 {
                     width: 100%;
                     padding: 0;
-                    @media screen and (min-width: $tabwidth){
+                    @media screen and (min-width: $midwidth){
                         width: 50%;
                         padding: 0 2.5%;
                     }
@@ -394,7 +383,7 @@
                     color: white;
                     padding: 20px 20px 0 20px;
                     width: 100%;
-                    @media screen and (min-width: $tabwidth){
+                    @media screen and (min-width: $midwidth){
                         width: 50%;
                         padding: 0 12% 0 2.5%;
                     }
@@ -412,8 +401,6 @@
                     }
                     .copy {
                         color: white;
-                        margin-bottom: 5%;
-
                     }
                 }
                 img.divot {
