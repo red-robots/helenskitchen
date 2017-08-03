@@ -862,8 +862,7 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:600px){.template-index>.section-5>.wrapper .posts{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-justify-content:space-between;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin:10% 0}
 }.template-index>.section-5>.wrapper .posts .post{width:100%;margin:20px 0 0 0;position:relative;overflow-y:auto}
 @media screen and (min-width:600px){.template-index>.section-5>.wrapper .posts .post{width:31.33333%;margin:0}
-}.template-index>.section-5>.wrapper .posts .post:hover>.hidden{display:block}
-.template-index>.section-5>.wrapper .posts .post img{width:100%;display:block}
+}.template-index>.section-5>.wrapper .posts .post img{width:100%;display:block}
 .template-index>.section-5>.wrapper .posts .post>header{width:100%;background-color:white;padding:20px}
 .template-index>.section-5>.wrapper .posts .post>header h2{margin:0;color:black;font-size:18px}
 @media screen and (min-width:900px){.template-index>.section-5>.wrapper .posts .post>header h2{font-size:25px}

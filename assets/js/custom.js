@@ -82,17 +82,20 @@ jQuery(document).ready(function ($) {
             width: width,
         });
 	});
-	/*$('.template-index >.section-5 >.wrapper .posts .post').click(function(e){
+	$('.template-index >.section-5 >.wrapper .posts .post').hover(function(e){
 		var $this = $(this);
-		if(!$(e.target).is('a') && !$(e.target).hasClass('read-more')) {
-			if($this.hasClass('toggled')){
-				$this.removeClass('toggled');
-				$this.find('.hidden').hide(150);
-			} else {
-				$this.addClass('toggled');
-				$this.find('.hidden').show(150);
-			}
+		if(!$(e.target).is('a') && !$(e.target).hasClass('read-more') && window.innerWidth >= 600) {
+			$this.find('.hidden').show(150);
+		} else {
+			$this.find('.hidden').css("display","");
 		}
-	});*/
+	},function(e){
+		var $this = $(this);
+		if(!$(e.target).is('a') && !$(e.target).hasClass('read-more') && window.innerWidth >= 600) {
+			$this.find('.hidden').hide(150);
+		} else {
+			$this.find('.hidden').css("display","");
+		}
+	});
 
 });// END #####################################    END
