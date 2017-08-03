@@ -156,10 +156,8 @@
 						<?php $image = get_field("featured_image");
 						if($image):?>
 							<div class="post">
-								<div class="wrapper">
-									<img src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>">
-									<header class="hidden"><h2><?php the_title();?></h2></header>
-								</div><!--.wrapper-->
+								<img src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>">
+								<header><h2><a href="<?php echo get_the_permalink();?>"><?php the_title();?></a></h2></header>
 								<div class="hidden copy">
 									<?php the_content('<br><span class="read-more">Read More</span>');?>
 								</div><!--.hidden-->

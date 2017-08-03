@@ -82,7 +82,7 @@ jQuery(document).ready(function ($) {
             width: width,
         });
 	});
-	$('.template-index >.section-5 >.wrapper .posts .post').click(function(e){
+	/*$('.template-index >.section-5 >.wrapper .posts .post').click(function(e){
 		var $this = $(this);
 		if(!$(e.target).is('a') && !$(e.target).hasClass('read-more')) {
 			if($this.hasClass('toggled')){
@@ -93,6 +93,6 @@ jQuery(document).ready(function ($) {
 				$this.find('.hidden').show(150);
 			}
 		}
-	})
+	});*/
 
 });// END #####################################    END
