@@ -125,10 +125,23 @@
 	<section class="section section-5">
 		<div class="wrapper">
 			<?php $title = get_field("section_5_title");
+			$subtitle = get_field("section_5_subtitle");
+			$link = get_field("section_5_link");
 			if($title):?>
 				<h2 class="title">
-					<?php echo $title;?>
+					<?php if($link):?>
+						<a href="<?php echo $link;?>">
+					<?php endif;?>
+						<?php echo $title;?>
+					<?php if($link):?>
+						</a>
+					<?php endif;?>
 				</h2><!--.title-->
+				<?php if($subtitle):?>
+					<div class="copy">
+						<?php echo $subtitle;?>
+					</div><!--.copy-->
+				<?php endif;?>
 			<?php endif;?>
 			<?php $args = array(
 				'post_type'=>'post',

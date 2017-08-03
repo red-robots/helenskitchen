@@ -261,12 +261,25 @@
                 line-height: 1.2;
                 font-size: 30px;
                 font-weight: 500;
+                margin: 0;
                 @media screen and (min-width: $tabwidth){
                     font-size: 45px;
                 }
                 @media screen and (min-width: $midwidth){
                     font-size: 65px;
                 }
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                    &:hover {
+                        color: inherit;
+                    }
+                }
+            }
+            .copy {
+                color: white;
+                text-align: center;
+                margin: 10px 0 0 0;
             }
             .posts {
                 @include flexbox();
