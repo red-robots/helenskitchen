@@ -869,7 +869,8 @@ html[xmlns] .flexslider .slides{display:block}
 }.template-index>.section-5>.wrapper .posts .post>header h2 a{color:inherit;text-decoration:none}
 .template-index>.section-5>.wrapper .posts .post>header h2 a:hover{color:inherit}
 .template-index>.section-5>.wrapper .posts .post>.hidden{background-color:white;font-size:16px;padding:20px}
-@media screen and (min-width:600px){.template-index>.section-5>.wrapper .posts .post>.hidden{font-size:18px;display:none}
+@media screen and (max-width:599px){.template-index>.section-5>.wrapper .posts .post>.hidden{display:block !important}
+}@media screen and (min-width:600px){.template-index>.section-5>.wrapper .posts .post>.hidden{font-size:18px;display:none}
 }.template-index>.section-5>.wrapper .posts .post>.hidden>header{margin-bottom:20px}
 .template-index>.section-5>.wrapper .posts .post>.hidden>header h2{margin:0;font-size:20px}
 .template-index>.section-5>.wrapper .posts .post>.hidden .read-more{border:1px solid #a36941;border-radius:10px;padding:20px;display:inline-block;margin-top:20px;color:#a36941;text-transform:uppercase}
