@@ -84,18 +84,10 @@ jQuery(document).ready(function ($) {
 	});
 	$('.template-index >.section-5 >.wrapper .posts .post').hover(function(e){
 		var $this = $(this);
-		if(!$(e.target).is('a') && !$(e.target).hasClass('read-more') && window.innerWidth >= 600) {
-			$this.find('.hidden').show(150);
-		} else {
-			$this.find('.hidden').css("display","");
-		}
+		$this.find('.hidden').slideDown(500);
 	},function(e){
 		var $this = $(this);
-		if(!$(e.target).is('a') && !$(e.target).hasClass('read-more') && window.innerWidth >= 600) {
-			$this.find('.hidden').hide(150);
-		} else {
-			$this.find('.hidden').css("display","");
-		}
+		$this.find('.hidden').slideUp(500);
 	});
 
 });// END #####################################    END
